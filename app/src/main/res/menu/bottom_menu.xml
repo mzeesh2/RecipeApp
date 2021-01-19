@@ -4,14 +4,14 @@
 
     <item
         android:id="@+id/homeFragment"
-        android:title="Home"
+        android:title="@string/home"
         android:icon="@drawable/ic_home" />
     <item
         android:id="@id/savedFragment"
-        android:title="Saved"
+        android:title="@string/saved"
         android:icon="@drawable/ic_saved"/>
     <item
         android:id="@id/shoppingListFragment"
-        android:title="Shopping"
+        android:title="@string/shopping"
         android:icon="@drawable/ic_shopping"/>
 </menu>
