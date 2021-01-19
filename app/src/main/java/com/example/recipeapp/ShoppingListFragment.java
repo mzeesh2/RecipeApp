@@ -58,6 +58,10 @@ public class ShoppingListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        //Calls the setTitle() from MainActivity.java
+        getActivity().setTitle("Shopping List");
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_shopping_list, container, false);
     }
