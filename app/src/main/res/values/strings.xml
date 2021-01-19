@@ -8,4 +8,7 @@
     <string name="home">Home</string>
     <string name="shopping">Shopping</string>
 
+
+    <!-- Use for savedFragment -->
+    <string name = "placeHolder">This is just a place holder. Here are all the foods you can make right now!</string>
 </resources>

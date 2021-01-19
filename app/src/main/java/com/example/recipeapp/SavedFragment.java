@@ -4,9 +4,13 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +64,16 @@ public class SavedFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_saved, container, false);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        View view = getView();
+        if(view != null) {
+            TextView textView = (TextView) view.findViewById(R.id.saved);
+            textView.setText("SUPER LONG PARAGRAPH  SUPER LONG PARAGRAPH HUHEUHEHUHEUSUPER LONG PARAGRAPH HUHEUHEHUHEUSUPER LONG PARAGRAPH HUHEUHEHUHEUSUPER LONG PARAGRAPH HUHEUHEHUHEUSUPER LONG PARAGRAPH HUHEUHEHUHEUSUPER LONG PARAGRAPH HUHEUHEHUHEUSUPER LONG PARAGRAPH HUHEUHEHUHEU");
+            textView.setMovementMethod(new ScrollingMovementMethod());
+        }
     }
 }
