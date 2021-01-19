@@ -6,11 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".SavedRecipes">
 
-    <TextView
-        android:id="@+id/textView"
+
+
+
+    <Button
+        android:id="@+id/savedRecipes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Saved Recipe Page"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="332dp" />
+        android:layout_marginBottom="16dp"
+        android:text="@string/saved"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/readyToGoRecipes"
+        android:layout_width="350dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
