@@ -6,15 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".SavedFragment">
 
+    <!-- code for the text of this TextView is in SavedFragment.java -->
+
     <TextView
-        android:id="@+id/saved"
-        android:layout_width="338dp"
-        android:layout_height="169dp"
-        android:layout_marginTop="132dp"
-        android:textAlignment="center"
+        android:id="@+id/recipesThatCanBeMade"
+        android:layout_width="381dp"
+        android:layout_height="226dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/back"
+        android:padding="10dip"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolTip" />
+
+    <TextView
+        android:id="@+id/toolTip"
+        android:layout_width="354dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/toolTip"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
