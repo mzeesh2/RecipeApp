@@ -76,9 +76,14 @@ public class SavedFragment extends Fragment {
         super.onStart();
         View view = getView();
         if(view != null) {
-            TextView textView = (TextView) view.findViewById(R.id.recipesThatCanBeMade);
+            TextView textView = (TextView) view.findViewById(R.id.recipesThatCanBeMade); //links to the textview in xml file
             textView.setText(getResources().getString(R.string.availableRecipes));
             textView.setMovementMethod(new ScrollingMovementMethod());
+
+            TextView textView2 = (TextView) view.findViewById(R.id.AllRecipes); //links to the textview in xml file
+            textView2.setText(getResources().getString(R.string.allRecipes));
+            textView2.setMovementMethod(new ScrollingMovementMethod());
+
         }
     }
 }
