@@ -7,14 +7,44 @@
     tools:context=".HomeFragment">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="70dp"
-        android:layout_height="28dp"
-        android:text="@string/home"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/welcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/welcome"
+        android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/recipeOfTheDayMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/here_s_the_recipe_of_the_day"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/recipeOfTheDay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeMessage" />
+
+    <WebView
+        android:id="@+id/recipeOfTheDay"
+        android:layout_width="381dp"
+        android:layout_height="322dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeMessage" />
+
+    <View
+        android:id="@+id/tipsView"
+        android:layout_width="375dp"
+        android:layout_height="329dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipeOfTheDay" />
 </androidx.constraintlayout.widget.ConstraintLayout>

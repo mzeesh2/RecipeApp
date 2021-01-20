@@ -41,7 +41,10 @@
         \n11.Chocolate Chip Cookies
         \n12.MeatLoaf
         \n13.Lasagna</string>
-
+    <string name="welcome_here_s_the_recipe_of_the_day">Welcome! Here\'s the recipe of the day:</string>
+    <string name="welcome">Welcome!</string>
+    <string name="here_s_the_recipe_of_the_day">Here\'s the recipe of the day:</string>
+    <string name="ingredients_at_home">Ingredients at Home</string>
 
 
 </resources>
