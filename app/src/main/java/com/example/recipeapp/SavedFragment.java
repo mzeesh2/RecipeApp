@@ -76,8 +76,8 @@ public class SavedFragment extends Fragment {
         super.onStart();
         View view = getView();
         if(view != null) {
-            TextView textView = (TextView) view.findViewById(R.id.saved);
-            textView.setText("SUPER LONG PARAGRAPH  SUPER LONG PARAGRAPH HUHEUHEHUHEUSUPER LONG PARAGRAPH HUHEUHEHUHEUSUPER LONG PARAGRAPH HUHEUHEHUHEUSUPER LONG PARAGRAPH HUHEUHEHUHEUSUPER LONG PARAGRAPH HUHEUHEHUHEUSUPER LONG PARAGRAPH HUHEUHEHUHEUSUPER LONG PARAGRAPH HUHEUHEHUHEU");
+            TextView textView = (TextView) view.findViewById(R.id.recipesThatCanBeMade);
+            textView.setText(getResources().getString(R.string.availableRecipes));
             textView.setMovementMethod(new ScrollingMovementMethod());
         }
     }
