@@ -93,6 +93,9 @@ public class SavedFragment extends Fragment {
         myrecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
         myrecyclerview.setAdapter(recipeAdapter);
 
+        //Sets tile of page
+        getActivity().setTitle("Saved Recipes");
+
         return v;
     }
 
