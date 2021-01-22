@@ -9,10 +9,10 @@
     <!-- code for the text of this TextView is in SavedFragment.java -->
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fragmentRecyclerView"
+        android:id="@+id/availableRecipeRecyclerView"
         android:layout_width="375dp"
         android:layout_height="222dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:background="@android:color/darker_gray"
         android:padding="4dp"
 
@@ -21,5 +21,40 @@
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allRecipeRecyclerView"
+        android:layout_width="375dp"
+        android:layout_height="410dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/darker_gray"
+        android:padding="4dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/availableRecipeRecyclerView"
+        app:layout_constraintVertical_bias="0.257" />
+
+    <TextView
+        android:id="@+id/toolTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toolTip"
+        app:layout_constraintBottom_toTopOf="@+id/availableRecipeRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761" />
+
+    <TextView
+        android:id="@+id/toolTip2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toolTip2"
+        app:layout_constraintBottom_toTopOf="@+id/allRecipeRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
