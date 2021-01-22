@@ -66,11 +66,19 @@ public class SavedFragment extends Fragment {
 
         recipes = new ArrayList<>();
         recipes.add(new RecipeItem(R.drawable.ic_recipe, "example name", "example description"));
+        recipes.add(new RecipeItem(R.drawable.ic_recipe, "Shrimp & Snow Pear Stir Fry", "Tasty Sea Food"));
+        recipes.add(new RecipeItem(R.drawable.ic_recipe, "Spicy Dal", "Very Spicy Dal"));
+        recipes.add(new RecipeItem(R.drawable.ic_recipe, "Chocolate Covered Strawberries", "Fun valentine's day treat"));
+        recipes.add(new RecipeItem(R.drawable.ic_recipe, "Homemade Philly Cheesesteaks", "Perfection!"));
 
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
+        /*
+        not sure if we need this code or not, will leave it here
+         */
+//        if (getArguments() != null) {
+//            mParam1 = getArguments().getString(ARG_PARAM1);
+//            mParam2 = getArguments().getString(ARG_PARAM2);
+//        }
 
 
     }
