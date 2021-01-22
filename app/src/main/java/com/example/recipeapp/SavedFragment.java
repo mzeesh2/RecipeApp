@@ -3,6 +3,8 @@ package com.example.recipeapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -12,12 +14,20 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link SavedFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class SavedFragment extends Fragment {
+    View v;
+    private RecyclerView myrecyclerview;
+    private List<RecipeItem> recipes;
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -53,22 +63,29 @@ public class SavedFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        recipes = new ArrayList<>();
+        recipes.add(new RecipeItem(R.drawable.ic_recipe, "example name", "example description"));
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        //Calls the setTitle() from MainActivity.java
-        getActivity().setTitle("Saved Recipes");
-
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_saved, container, false);
+        v = inflater.inflate(R.layout.fragment_saved, container, false);
+        myrecyclerview = (RecyclerView) v.findViewById(R.id.fragmentRecyclerView);
+        RecipeAdapter recipeAdapter = new RecipeAdapter(getContext(), recipes);
+        myrecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
+        myrecyclerview.setAdapter(recipeAdapter);
+
+        return v;
     }
 
     @Override
@@ -76,13 +93,6 @@ public class SavedFragment extends Fragment {
         super.onStart();
         View view = getView();
         if(view != null) {
-            TextView textView = (TextView) view.findViewById(R.id.recipesThatCanBeMade); //links to the textview in xml file
-            textView.setText(getResources().getString(R.string.availableRecipes));
-            textView.setMovementMethod(new ScrollingMovementMethod());
-
-            TextView textView2 = (TextView) view.findViewById(R.id.AllRecipes); //links to the textview in xml file
-            textView2.setText(getResources().getString(R.string.allRecipes));
-            textView2.setMovementMethod(new ScrollingMovementMethod());
 
         }
     }
