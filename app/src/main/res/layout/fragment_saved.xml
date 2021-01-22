@@ -8,55 +8,18 @@
 
     <!-- code for the text of this TextView is in SavedFragment.java -->
 
-    <TextView
-        android:id="@+id/recipesThatCanBeMade"
-        android:layout_width="381dp"
-        android:layout_height="226dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/back"
-        android:padding="10dip"
-        android:textSize="18sp"
-        android:text="@string/availableRecipes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolTip" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragmentRecyclerView"
+        android:layout_width="375dp"
+        android:layout_height="222dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/darker_gray"
+        android:padding="4dp"
 
-    <TextView
-        android:id="@+id/toolTip"
-        android:layout_width="354dp"
-        android:layout_height="19dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/toolTip"
-        android:textAlignment="center"
+        android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/AllRecipes"
-        android:layout_width="377dp"
-        android:layout_height="256dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/back"
-        android:padding="10dip"
-        android:text="@string/allRecipes"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipesThatCanBeMade"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="@string/toolTip2"
-        app:layout_constraintBottom_toTopOf="@+id/AllRecipes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
