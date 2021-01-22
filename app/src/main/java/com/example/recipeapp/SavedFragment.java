@@ -6,13 +6,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,10 +21,11 @@ import java.util.List;
  */
 public class SavedFragment extends Fragment {
     View v;
-    private RecyclerView myrecyclerview;
-    private List<RecipeItem> recipes;
+    private RecyclerView availableRecyclerview;
+    private List<RecipeItem> availableRecipes;
 
-
+    private RecyclerView allRecyclerview;
+    private List<RecipeItem> allRecipes;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -64,13 +62,16 @@ public class SavedFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        recipes = new ArrayList<>();
-        recipes.add(new RecipeItem(R.drawable.ic_recipe, "example name", "example description"));
-        recipes.add(new RecipeItem(R.drawable.ic_recipe, "Shrimp & Snow Pear Stir Fry", "Tasty Sea Food"));
-        recipes.add(new RecipeItem(R.drawable.ic_recipe, "Spicy Dal", "Very Spicy Dal"));
-        recipes.add(new RecipeItem(R.drawable.ic_recipe, "Chocolate Covered Strawberries", "Fun valentine's day treat"));
-        recipes.add(new RecipeItem(R.drawable.ic_recipe, "Homemade Philly Cheesesteaks", "Perfection!"));
+        availableRecipes = new ArrayList<>();
+        availableRecipes.add(new RecipeItem(R.drawable.ic_recipe, "example name", "example description"));
+        availableRecipes.add(new RecipeItem(R.drawable.ic_recipe, "Shrimp & Snow Pear Stir Fry", "Tasty Sea Food"));
+        availableRecipes.add(new RecipeItem(R.drawable.ic_recipe, "Spicy Dal", "Very Spicy Dal"));
+        availableRecipes.add(new RecipeItem(R.drawable.ic_recipe, "Chocolate Covered Strawberries", "Fun valentine's day treat"));
+        availableRecipes.add(new RecipeItem(R.drawable.ic_recipe, "Homemade Philly Cheesesteaks", "Perfection!"));
 
+
+        allRecipes = new ArrayList<>();
+        allRecipes.add(new RecipeItem(R.drawable.ic_recipe, "Biryani", "Lamb Biryani is better than Chicken Biryani"));
 
         /*
         not sure if we need this code or not, will leave it here
@@ -88,10 +89,16 @@ public class SavedFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         v = inflater.inflate(R.layout.fragment_saved, container, false);
-        myrecyclerview = (RecyclerView) v.findViewById(R.id.fragmentRecyclerView);
-        RecipeAdapter recipeAdapter = new RecipeAdapter(getContext(), recipes);
-        myrecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
-        myrecyclerview.setAdapter(recipeAdapter);
+        availableRecyclerview = (RecyclerView) v.findViewById(R.id.availableRecipeRecyclerView);
+        RecipeAdapter recipeAdapter = new RecipeAdapter(getContext(), availableRecipes);
+        availableRecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
+        availableRecyclerview.setAdapter(recipeAdapter);
+
+        allRecyclerview = (RecyclerView) v.findViewById(R.id.allRecipeRecyclerView);
+        RecipeAdapter recipeAdapter1 = new RecipeAdapter(getContext(), allRecipes);
+        allRecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
+        allRecyclerview.setAdapter(recipeAdapter1);
+
 
         //Sets tile of page
         getActivity().setTitle("Saved Recipes");
