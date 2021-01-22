@@ -13,34 +13,8 @@
     <string name="saved">Saved</string>
     <string name="toolTip">Available recipes based on current ingredients!</string>
     <string name="toolTip2">All Recipes!</string>
-    <string name = "availableRecipes">1.Spicy Meat and Seafood Fry
-        \n2.Enduring Mushroom Skewer
-        \n3.Hasty Meat and Mushroom Skewer
-        \n4.Hearty Steamed Mushrooms
-        \n5.Hearty Wil Green
-        \n6.Hasty Elixir
-        \n7.Fairy Tonic
-        \n8.Energising Elixir
-        \n9.Pancakes
-        \n10.Prime Ribs
-        \n11.Chocolate Chip Cookies
-        \n12.MeatLoaf
-        \n13.Lasagna
-    </string>
 
-    <string name ="allRecipes">1.Spicy Meat and Seafood Fry
-        \n2.Enduring Mushroom Skewer
-        \n3.Hasty Meat and Mushroom Skewer
-        \n4.Hearty Steamed Mushrooms
-        \n5.Hearty Wil Green
-        \n6.Hasty Elixir
-        \n7.Fairy Tonic
-        \n8.Energising Elixir
-        \n9.Pancakes
-        \n10.Prime Ribs
-        \n11.Chocolate Chip Cookies
-        \n12.MeatLoaf
-        \n13.Lasagna</string>
+
     <string name="welcome_here_s_the_recipe_of_the_day">Welcome! Here\'s the recipe of the day:</string>
     <string name="welcome">Welcome!</string>
     <string name="here_s_the_recipe_of_the_day">Here\'s the recipe of the day:</string>
