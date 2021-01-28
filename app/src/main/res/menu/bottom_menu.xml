@@ -14,4 +14,9 @@
         android:id="@id/shoppingListFragment"
         android:title="@string/shopping"
         android:icon="@drawable/ic_shopping"/>
+
+    <item
+        android:id="@id/myKitchenFragment"
+        android:title="myKitchen"
+        android:icon="@drawable/ic_kitchen"/>
 </menu>

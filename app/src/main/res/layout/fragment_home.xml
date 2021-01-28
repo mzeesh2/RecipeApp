@@ -32,8 +32,8 @@
 
     <WebView
         android:id="@+id/recipeOfTheDay"
-        android:layout_width="381dp"
-        android:layout_height="322dp"
+        android:layout_width="372dp"
+        android:layout_height="187dp"
         android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,8 +41,8 @@
 
     <View
         android:id="@+id/tipsView"
-        android:layout_width="375dp"
-        android:layout_height="329dp"
+        android:layout_width="337dp"
+        android:layout_height="272dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
